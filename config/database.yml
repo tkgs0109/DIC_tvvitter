@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  template: template0
+
+development:
+  <<: *default
+  database: tvvitter_development
+
+test:
+  <<: *default
+  database: tvvitter_test
+
+production:
+  <<: *default
+  database: tvvitter_production
+  username: tvvitter
+  password: <%= ENV['TVVITTER_DATABASE_PASSWORD'] %>
