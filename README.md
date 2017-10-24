@@ -7,7 +7,6 @@
 - tweetsテーブルは、本文（content）のみカラムを有すること（id,timestampはデフォルトで生成されるのでそのままで良い）
 - Githubにソースコードを送信し、そのリポジトリのURLを提出すること
 - Herokuにアップロードしてある状態であること
-***
 
 ## サブ要件
 - HTML,CSS,Bootstrapを使用して、現実のTwitterに似せたデザインにすること。  
