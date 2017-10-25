@@ -2,13 +2,22 @@
 <html>
   <head>
     <title>Tvvitter</title>
-    <%= csrf_meta_tags %>
-
+    <meta name="viewport" content="width=device-width">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
   </head>
-
   <body>
+    <header>
+      <ul>
+        <li><a href="#">Twitterクローン</a></li>
+        <li><a href="#">トップページ</a></li>
+      </ul>
+    </header>
     <%= yield %>
   </body>
+  <footer class="footer">
+    <p>運営会社DIVE INTO CODE株式会社</p>
+    <p>© 2016-2017 Copyright DIVE INTO CODE Corp.</p>
+  </footer>
 </html>
