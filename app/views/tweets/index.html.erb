@@ -5,13 +5,13 @@
   </div>
   <div class="row">
     <% @tweets.each do |tweet| %>
-      <div class="col-xs-12 col-md-6 blog-panel">
+      <div>
         <h2 class="tweetAccount"><%= tweet.user %></h2>
         <p class="tweetContent"><%= tweet.content %></p>
         <div class="tweet-links">
-          <%= link_to 'Show', blog, class:'btn btn-default' %>
+          <%= link_to 'Show', tweet, class:'btn btn-default' %>
           <%= link_to 'Edit', edit_tweet_path(tweet), class:'btn btn-info' %>
-          <%= link_to 'Destroy', blog, method: :delete, data:{confirm:'Are you sure?'}, class:'btn btn-danger' %>
+          <%= link_to 'Destroy', tweet, method: :delete, data:{confirm:'Are you sure?'}, class:'btn btn-danger' %>
         </div>
       </div>
     <% end %>
