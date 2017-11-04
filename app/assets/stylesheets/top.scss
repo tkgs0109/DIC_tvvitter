@@ -1,11 +1,12 @@
 header {
   width: 100%;
   background-color: #1DA1F2;
-  height: 54px;
+  height: 70px;
 }
 
 header ul {
   margin: 0 auto;
+  padding: 0;
   list-style: none;
 }
 
@@ -13,7 +14,6 @@ header ul a {
   display: block;
   padding: 15px;
   text-decoration: none;
-  color: white;
 }
 
 header li {
@@ -35,8 +35,6 @@ html {
 body {
   min-height: 100%;
   padding-bottom: 100px;
-  background-color: #E6E6E6;
-  color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;

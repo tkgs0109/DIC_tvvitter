@@ -1,22 +1,16 @@
-<h1>Tweets</h1>
-<div class="container"  >
-  <div id="new-tweet-link">
-    <%= link_to '新規ツイートを作成する', new_tweet_path %>
-  </div>
-  <div class="row">
-    <% @tweets.each do |tweet| %>
-      <div class="row">
-        <div class="col-xs-12 col-sm-8">
-          <p class="tweetID"><%= tweet.id %></p>
-          <p class="tweetTime"><%= tweet.updated_at %></p>
-          <p class="tweetContent"><%= tweet.content %></p>
-        </div>
-        <div class="col-xs-12 col-sm-4 tweet-links">
-          <%= link_to 'Show', tweet, class:'btn btn-default' %>
-          <%= link_to 'Edit', edit_tweet_path(tweet), class:'btn btn-info' %>
-          <%= link_to 'Destroy', tweet, method: :delete, data:{confirm:'Are you sure?'}, class:'btn btn-danger' %>
-        </div>
+<div class="container">
+  <h2>Tweet一覧</h2>
+  <% @tweets.each do |tweet| %>
+    <div class="tweet row">
+      <div class="col-xs-12 col-md-8 col-lg-9 tweet-message">
+        <p class="tweetContent"><%= tweet.content %></p>
+        <p class="tweetTime"><%= tweet.updated_at %></p>
       </div>
-    <% end %>
-  </div>
+      <div class="col-xs-12 col-md-4 col-lg-3 tweet-links">
+        <%= link_to 'Show', tweet, class:'btn btn-default' %>
+        <%= link_to 'Edit', edit_tweet_path(tweet), class:'btn btn-info' %>
+        <%= link_to 'Destroy', tweet, method: :delete, data:{confirm:'Are you sure?'}, class:'btn btn-danger' %>
+      </div>
+    </div>
+  <% end %>
 </div>

@@ -1,5 +1,6 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
+  after_action :update_tweet, only: [:edit, :update]
   
   def index
     @tweets = Tweet.all
@@ -44,5 +45,9 @@ class TweetsController < ApplicationController
   
   def set_tweet
     @tweet = Tweet.find(params[:id])
+  end
+  
+  def update_tweet
+    @tweet.save
   end
 end
