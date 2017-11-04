@@ -29,3 +29,9 @@
     - 一覧
     - 削除
     - 新規
+
+- 2017/11/1
+  - タイムスタンプ実装(t.timestamps null: false)の記載
+  - aaaaaaa
+  - aaaaaaa
+  - 

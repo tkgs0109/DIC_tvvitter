@@ -5,10 +5,13 @@
   </div>
   <div class="row">
     <% @tweets.each do |tweet| %>
-      <div>
-        <h2 class="tweetAccount"><%= tweet.user %></h2>
-        <p class="tweetContent"><%= tweet.content %></p>
-        <div class="tweet-links">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8">
+          <p class="tweetID"><%= tweet.id %></p>
+          <p class="tweetTime"><%= tweet.updated_at %></p>
+          <p class="tweetContent"><%= tweet.content %></p>
+        </div>
+        <div class="col-xs-12 col-sm-4 tweet-links">
           <%= link_to 'Show', tweet, class:'btn btn-default' %>
           <%= link_to 'Edit', edit_tweet_path(tweet), class:'btn btn-info' %>
           <%= link_to 'Destroy', tweet, method: :delete, data:{confirm:'Are you sure?'}, class:'btn btn-danger' %>
